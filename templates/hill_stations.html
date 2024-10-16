@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Hill Stations</title>
+    <style>
+        body {
+            background-color: #f0f8ff; /* Light blue background color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .hill-stations-container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        li:hover {
+            transform: scale(1.02);
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .visit-button {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 10px 0;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .logout-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .logout-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="hill-stations-container">
+        <h2>Popular Hill Stations</h2>
+        <ul>
+            <li>
+                <img src="https://media1.thrillophilia.com/filestore/yflt72cqagt3eytr7hs2poazvmgi_1575709709_shutterstock_752913262.jpg">
+                <h3>Manali</h3>
+                <p><strong>State:</strong> Himachal Pradesh</p>
+                <p>A popular hill station known for its scenic beauty.</p>
+                <a href="https://www.himachaltourism.gov.in/manali" class="visit-button">Visit Here</a>
+            </li>
+            <li>
+                <img src="https://www.valleytripplanner.in/wp-content/uploads/2023/01/shimla-33-min.jpg" alt="Shimla">
+                <h3>Shimla</h3>
+                <p><strong>State:</strong> Himachal Pradesh</p>
+                <p>The capital city of Himachal Pradesh, famous for its Victorian architecture.</p>
+                <a href="https://www.himachaltourism.gov.in/shimla" class="visit-button">Visit Here</a>
+            </li>
+            <li>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Darjeeling_Sunset.jpg/800px-Darjeeling_Sunset.jpg" alt="Darjeeling">
+                <h3>Darjeeling</h3>
+                <p><strong>State:</strong> West Bengal</p>
+                <p>Known for its tea plantations and stunning views of the Himalayas.</p>
+                <a href="https://www.westbengaltourism.gov.in/darjeeling" class="visit-button">Visit Here</a>
+            </li>
+            <li>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Ooty_Garden.jpg/800px-Ooty_Garden.jpg" alt="Ooty">
+                <h3>Ooty</h3>
+                <p><strong>State:</strong> Tamil Nadu</p>
+                <p>A popular hill station known for its gardens and pleasant weather.</p>
+                <a href="https://www.tamilnadutourism.tn.gov.in/ooty" class="visit-button">Visit Here</a>
+            </li>
+        </ul>
+        <a class="logout-link" href="{{ url_for('logout') }}">Logout</a>
+    </div>
+</body>
+</html>
